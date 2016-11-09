@@ -1,0 +1,6 @@
+Order Deny,Allow
+Deny from all
+Allow from 1.2.3.4
+
+
+ErrorDocument 403 /index.php

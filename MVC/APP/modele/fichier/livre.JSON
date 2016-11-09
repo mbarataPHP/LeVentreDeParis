@@ -1,0 +1,2 @@
+{"key":{"id":{"type":"int"},"email":{"type":"string","nbr":100,"null":false},"dateAffect":{"type":"datetime"},"comment":{"type":"string","nbr":300,"null":false}},
+"lesValeurs":[[1,"mathieu@barata.fr","2016-10-01 14:57:09","salut"],[2,"mathieu@barata.fr","2016-10-01 15:38:51","zedzed"]]}
