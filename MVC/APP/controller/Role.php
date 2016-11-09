@@ -34,14 +34,18 @@ class Role{
                     $returnBool = true;
                 }
                 break;
-
+            case "entreprise":
+                if($_SESSION["ROLE"]["ROLE"]=="administrateur" || $_SESSION["ROLE"]["ROLE"]=="entreprise"){
+                    $returnBool = true;
+                }
+                break;
             case "utilisateur":
-                if($_SESSION["ROLE"]["ROLE"]=="administrateur" || $_SESSION["ROLE"]["ROLE"]=="utilisateur"){
+                if($_SESSION["ROLE"]["ROLE"]=="administrateur" || $_SESSION["ROLE"]["ROLE"]=="utilisateur" || $_SESSION["ROLE"]["ROLE"]=="entreprise"){
                     $returnBool = true;
                 }
                 break;
             default:
-                if($_SESSION["ROLE"]["ROLE"]=="administrateur" || $_SESSION["ROLE"]["ROLE"]=="utilisateur" || $_SESSION["ROLE"]["ROLE"]=="anonyme"){
+                if($_SESSION["ROLE"]["ROLE"]=="administrateur" || $_SESSION["ROLE"]["ROLE"]=="utilisateur" || $_SESSION["ROLE"]["ROLE"]=="anonyme" || $_SESSION["ROLE"]["ROLE"]=="entreprise"){
                     $returnBool = true;
                 }
         }
@@ -65,6 +69,9 @@ class Role{
 
             case "utilisateur":
                 $_SESSION["ROLE"]["ROLE"] = "utilisateur";
+                break;
+            case "entreprise":
+                $_SESSION["ROLE"]["ROLE"] = "entreprise";
                 break;
             default:
                 $_SESSION["ROLE"]["ROLE"] = "anonyme";
